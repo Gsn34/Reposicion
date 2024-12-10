@@ -69,9 +69,11 @@ public class BaseDeDatos {
                 scan.nextLine();
             CompilacionDatos temp = new CompilacionDatos (nombre, apellido, edad, dato, valor);
             compilacion.add(temp);
-            reporte.Reporte();
 
         } while (resp =='s' || resp =='S');
+            
+        reporte.Reporte();
+        
     }
     
     public ArrayList <CompilacionDatos> GetCompilacion (){
@@ -80,4 +82,5 @@ public class BaseDeDatos {
     public void SetCompilacion (ArrayList<CompilacionDatos> compilacion){
         this.compilacion = compilacion;
     }
+    
 }

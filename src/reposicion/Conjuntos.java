@@ -43,9 +43,29 @@ public class Conjuntos {
                 }
             }
         }
+        System.out.println();
         System.out.println("|Interseccion|");
+        System.out.print("Conjunto: {");
         for (int i = 0; i < interseccion.length; i++) {
-            
+            System.out.print(interseccion[i]+", ");
         }
+        System.out.print("}");
+        System.out.println("");
     }
+    public void ImprimirArreglos(){
+        System.out.print("Conjunto A: {");
+        String arreglo = "";
+        for (int i = 0; i < arregloA.length; i++) {
+            arreglo+=arregloA[i]+", ";
+        }
+        System.out.print(arreglo.substring(0, arreglo.length()-2));
+        System.out.print("}");
+        System.out.println();
+        arreglo="";
+        System.out.print("Conjunto B: {");
+        for (int i = 0; i < arregloA.length; i++) {
+            arreglo+=arregloB[i]+", ";
+        }
+        System.out.print(arreglo.substring(0, arreglo.length()-2));
+        System.out.print("}");    }
 }

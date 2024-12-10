@@ -21,6 +21,9 @@ public class CompilacionDatos {
         this.valor = valor;
     }
     
+    public CompilacionDatos(ArrayList<CompilacionDatos> compilacion){       
+    }
+    
     public ArrayList<String> GetNombre (){
         return nombre;
     }
@@ -51,4 +54,9 @@ public class CompilacionDatos {
     public void setEdad (ArrayList <Integer> edad){
         this.edad = edad;
     }
+    @Override
+    public String toString(){
+        return "Nombre: "+this.nombre+" || Apellido: "+this.apellido+" || Edad: "+this.edad;
+    }
+    
 }
