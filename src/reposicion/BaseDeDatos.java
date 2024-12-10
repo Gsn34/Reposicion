@@ -14,14 +14,18 @@ public class BaseDeDatos {
     private ArrayList <Integer> edad;
     private ArrayList <String> dato;
     private ArrayList <String> valor;
+    private Reportes reporte;
+    private ArrayList <CompilacionDatos> compilacion;
     private Scanner scan = new Scanner(System.in);
 
     public BaseDeDatos() {
+        compilacion = new ArrayList<>();
         nombre = new ArrayList<>();
         apellido = new ArrayList<>();
         dato = new ArrayList<>();
         valor = new ArrayList<>();
         edad = new ArrayList<>();
+        reporte = new Reportes(compilacion);
     }
 
     public void menu() {
@@ -41,6 +45,7 @@ public class BaseDeDatos {
             System.out.println("Desea agregar mas datos?[S/N]");
             System.out.print("R: ");
             resp = scan.next().charAt(0);
+            scan.nextLine();
 
             if (resp == 'S' || resp == 's') {
 
@@ -54,18 +59,25 @@ public class BaseDeDatos {
                     System.out.println("Desea agregar mas datos?[S/N]");
                     System.out.print("R: ");
                     resp = scan.next().charAt(0);
+                    scan.nextLine();
                 } while (resp == 'S' || resp == 's');
-                
-                System.out.println("Desea continuar?[S/N]");
+             
+            }
+            System.out.println("Desea continuar?[S/N]");
                 System.out.print("R: ");
                 resp = scan.next().charAt(0);
-                
-                if (resp != 'S' || resp != 's') {
-                    break;
-                }
-            }
+                scan.nextLine();
+            CompilacionDatos temp = new CompilacionDatos (nombre, apellido, edad, dato, valor);
+            compilacion.add(temp);
+            reporte.Reporte();
 
         } while (resp =='s' || resp =='S');
     }
-
+    
+    public ArrayList <CompilacionDatos> GetCompilacion (){
+        return compilacion;
+    }
+    public void SetCompilacion (ArrayList<CompilacionDatos> compilacion){
+        this.compilacion = compilacion;
+    }
 }

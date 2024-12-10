@@ -12,6 +12,7 @@ public class CompilacionDatos {
     private ArrayList<Integer> edad;
     private ArrayList <String> dato;
     private ArrayList <String> valor;
+    
     public CompilacionDatos(ArrayList<String> nombre, ArrayList<String> apellido, ArrayList<Integer> edad, ArrayList<String> dato, ArrayList<String> valor){
         this.nombre = nombre;
         this.apellido = apellido;
@@ -19,16 +20,17 @@ public class CompilacionDatos {
         this.dato = dato;
         this.valor = valor;
     }
+    
     public ArrayList<String> GetNombre (){
         return nombre;
     }
-    public void setNombre (String nombre){
+    public void setNombre (ArrayList<String> nombre){
         this.nombre = nombre;
     }
-    public String GetApellido (){
+    public ArrayList<String> GetApellido (){
         return apellido;
     }
-    public void setApellido (String apellido){
+    public void setApellido (ArrayList<String> apellido){
         this.apellido = apellido;
     }
     public ArrayList<String> Getdato (){
@@ -42,5 +44,11 @@ public class CompilacionDatos {
     }
     public void setValor (ArrayList <String> valor){
         this.valor = valor;
+    }
+    public ArrayList<Integer> GetEdad (){
+        return edad;
+    }
+    public void setEdad (ArrayList <Integer> edad){
+        this.edad = edad;
     }
 }
