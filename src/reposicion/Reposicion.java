@@ -23,23 +23,38 @@ public class Reposicion {
             System.out.print("R: ");
             int opcion = sc.nextInt();
             switch (opcion) {
-                case 3 -> {
-                    BaseDeDatos base = new BaseDeDatos();
-                    base.menu();
-                }
+                
                 case 1->{
-                    Flecha flecha = new Flecha();
+                    System.out.println("");
+                    System.out.print("Ingrese un numero impar entero > 5: ");
+                    int numero = sc.nextInt();
+                    while (numero < 5 && numero%2 == 0) {
+                        System.out.print("Ingrese un numero impar entero > 5: ");
+                        numero = sc.nextInt();
+                    }
+                    Flecha flecha = new Flecha(numero);
+                    flecha.ImprimirMatriz();
+                    flecha.Suma();
+                    flecha.ImprimirFlecha();
                     
                 }
+                
                 case 2->{
                     Conjuntos conjunto = new Conjuntos();
                     conjunto.ImprimirArreglos();
                     conjunto.Union();
                     conjunto.Intereccion();
                 }
+                
+                case 3 -> {
+                    BaseDeDatos base = new BaseDeDatos();
+                    base.menu();
+                }
+                
                 case 0->{
                     ciclo = false;
                 }
+                
                 default -> {
                     System.out.println("Opcion incorrecta");
                 }
