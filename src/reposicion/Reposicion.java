@@ -28,7 +28,8 @@ public class Reposicion {
                     System.out.println("");
                     System.out.print("Ingrese un numero impar entero > 5: ");
                     int numero = sc.nextInt();
-                    while (numero < 5 && numero%2 == 0) {
+                    sc.nextLine();
+                    while (numero < 5 || numero%2 == 0) {
                         System.out.print("Ingrese un numero impar entero > 5: ");
                         numero = sc.nextInt();
                     }

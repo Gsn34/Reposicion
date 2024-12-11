@@ -35,7 +35,7 @@ public class Flecha {
             }
         }
         int numero = 0;
-        for (int i = 0; i <= 2; i++) {
+        for (int i = 0; i <= matriz.length - (matriz.length/2); i++) {
             while (numero+i < matriz.length - i) {               
                 suma += matriz[numero+i][(matriz.length / 2) + i]+" + ";
                 sumaNumeros+=matriz[numero+i][(matriz.length / 2) + i];
@@ -74,7 +74,7 @@ public class Flecha {
             }
         }
        int numero = 0;
-        for (int i = 0; i <= 2; i++) {
+        for (int i = 0; i <= matriz.length - (matriz.length/2); i++) {
             while (numero+i < matriz.length - i) {                                   
                 ejemplo[numero+i][(matriz.length / 2) + i] = (char) (matriz[numero+i][(matriz.length / 2) + i]+48);               
                 numero++;                                
